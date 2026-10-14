@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <title>Double Down Brewpub & Cafe — Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="logo" src="images/logo.png" alt="Double Down Brewpub & Cafe logo"
+         onerror="this.style.display='none';document.querySelector('.brand-fallback').style.display='block'">
+    <div class="brand-fallback" style="display:none">DOUBLE DOWN<br><span>BREWPUB &amp; CAFE</span></div>
+    <p class="tagline">Our Menu</p>
+  </header>
+
+  <main>
+    <nav class="tabs" aria-label="Menu categories">
+      <button class="tab active" data-category="food" aria-selected="true">Food Menu</button>
+      <button class="tab" data-category="drinks" aria-selected="false">Drinks Menu</button>
+    </nav>
+    <p class="hint">Tap any menu page to view it larger.</p>
+    <section id="food" class="gallery active" aria-label="Food menu pages"></section>
+    <section id="drinks" class="gallery" aria-label="Drinks menu pages" hidden></section>
+  </main>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <button class="close" id="closeViewer" aria-label="Close image">×</button>
+    <button class="nav prev" id="prevImage" aria-label="Previous image">‹</button>
+    <img id="viewerImage" src="" alt="Menu page enlarged">
+    <button class="nav next" id="nextImage" aria-label="Next image">›</button>
+    <div class="viewer-caption" id="viewerCaption"></div>
+  </div>
+
+  <footer>Double Down Brewpub &amp; Cafe</footer>
+  <script src="script.js"></script>
+</body>
+</html>
