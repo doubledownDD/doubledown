@@ -1,1 +1,1 @@
-Add food-01.jpg through food-12.jpg in this folder.
+Add food-01.jpeg through food-12.jpeg in this folder.

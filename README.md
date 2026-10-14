@@ -4,13 +4,13 @@ A simple, mobile-friendly menu photo website for GitHub Pages. It has 12 Food Me
 
 ## 1. Add your photos
 
-Keep the filenames exactly as listed below. JPG is recommended.
+Keep the filenames exactly as listed below. JPEG photos are supported; keep the `.jpeg` extension.
 
 - Logo: `images/logo.png`
-- Food pages: `images/food/food-01.jpg` through `images/food/food-12.jpg`
-- Drinks pages: `images/drinks/drinks-01.jpg` through `images/drinks/drinks-12.jpg`
+- Food pages: `images/food/food-01.jpeg` through `images/food/food-12.jpeg`
+- Drinks pages: `images/drinks/drinks-01.jpeg` through `images/drinks/drinks-12.jpeg`
 
-If your photos are PNG, convert them to JPG or update the `.jpg` filenames in `script.js` to `.png`. You can replace the example/missing slots whenever you're ready.
+If your photos are PNG, convert them to Keep your photos as `.jpeg`; the website code is already configured for that extension. You can replace the example/missing slots whenever you're ready.
 
 ## 2. Upload to GitHub
 
@@ -32,7 +32,7 @@ Share that URL or make a QR code for it. The website is designed for phones and 
 ## Photo naming checklist
 
 - `images/logo.png`
-- `images/food/food-01.jpg` ... `food-12.jpg`
-- `images/drinks/drinks-01.jpg` ... `drinks-12.jpg`
+- `images/food/food-01.jpeg` ... `food-12.jpeg`
+- `images/drinks/drinks-01.jpeg` ... `drinks-12.jpeg`
 
 The site does not upload photos itself; you add the photos to the GitHub repository. Send the logo and menu photos here if you'd like help preparing/naming them.

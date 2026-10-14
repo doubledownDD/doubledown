@@ -1,1 +1,1 @@
-Add drinks-01.jpg through drinks-12.jpg in this folder.
+Add drinks-01.jpeg through drinks-12.jpeg in this folder.

@@ -8,7 +8,7 @@ let currentCategory = "food";
 let currentIndex = 0;
 
 function imagePath(category, number) {
-  return `images/${category}/${category}-${String(number).padStart(2, "0")}.jpg`;
+  return `images/${category}/${category}-${String(number).padStart(2, "0")}.jpeg`;
 }
 function buildGallery(category) {
   const gallery = galleries[category];
@@ -25,7 +25,7 @@ function buildGallery(category) {
       img.remove();
       const missing = document.createElement("div");
       missing.className = "missing";
-      missing.innerHTML = `<span><strong>Page ${String(i).padStart(2,"0")}</strong><br>Upload your photo as<br><code>${category}-${String(i).padStart(2,"0")}.jpg</code></span>`;
+      missing.innerHTML = `<span><strong>Page ${String(i).padStart(2,"0")}</strong><br>Upload your photo as<br><code>${category}-${String(i).padStart(2,"0")}.jpeg</code></span>`;
       card.insertBefore(missing, card.firstChild);
     };
     const label = document.createElement("span");
