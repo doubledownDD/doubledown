@@ -1,11 +1,12 @@
-const counts = { food: 12, drinks: 12 };
-const names = { food: "Food Menu", drinks: "Drinks Menu" };
+const counts = { special: 2, food: 12, drinks: 12 };
+const names = { special: "Special Menu", food: "Food Menu", drinks: "Drinks Menu" };
 const galleries = {
+  special: document.getElementById("special"),
   food: document.getElementById("food"),
   drinks: document.getElementById("drinks")
 };
-let currentCategory = "food";
-let currentIndex = 0;
+let currentCategory = "special";
+let currentIndex = 1;
 
 function imagePath(category, number) {
   return `images/${category}/${category}-${String(number).padStart(2, "0")}.jpeg`;
@@ -16,21 +17,21 @@ function buildGallery(category) {
     const card = document.createElement("button");
     card.className = "menu-card";
     card.type = "button";
-    card.setAttribute("aria-label", `${names[category]} page ${i}`);
+    card.setAttribute("aria-label", `${names[category]} photo ${i}`);
     const img = document.createElement("img");
     img.src = imagePath(category, i);
-    img.alt = `${names[category]} page ${i}`;
+    img.alt = `${names[category]} photo ${i}`;
     img.loading = "lazy";
     img.onerror = () => {
       img.remove();
       const missing = document.createElement("div");
       missing.className = "missing";
-      missing.innerHTML = `<span><strong>Page ${String(i).padStart(2,"0")}</strong><br>Upload your photo as<br><code>${category}-${String(i).padStart(2,"0")}.jpeg</code></span>`;
+      missing.innerHTML = `<span><strong>${names[category]} · Photo ${String(i).padStart(2,"0")}</strong><br>Add your photo at<br><code>${imagePath(category, i)}</code></span>`;
       card.insertBefore(missing, card.firstChild);
     };
     const label = document.createElement("span");
     label.className = "number";
-    label.textContent = `${category === "food" ? "Food" : "Drinks"} · Page ${String(i).padStart(2, "0")}`;
+    label.textContent = `${names[category]} · ${category === "special" ? "Photo" : "Page"} ${String(i).padStart(2, "0")}`;
     card.append(img, label);
     card.addEventListener("click", () => openViewer(category, i));
     gallery.appendChild(card);
@@ -56,8 +57,9 @@ const viewerCaption = document.getElementById("viewerCaption");
 function openViewer(category, index) {
   currentCategory = category; currentIndex = index;
   viewerImage.src = imagePath(category, index);
-  viewerImage.alt = `${names[category]} page ${index}`;
-  viewerCaption.textContent = `${names[category]} · Page ${String(index).padStart(2, "0")} of 12`;
+  viewerImage.alt = `${names[category]} photo ${index}`;
+  const itemType = category === "special" ? "Photo" : "Page";
+  viewerCaption.textContent = `${names[category]} · ${itemType} ${String(index).padStart(2, "0")} of ${counts[category]}`;
   viewer.classList.add("open");
   viewer.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -83,5 +85,6 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") moveImage(-1);
   if (e.key === "ArrowRight") moveImage(1);
 });
+buildGallery("special");
 buildGallery("food");
 buildGallery("drinks");

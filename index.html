@@ -17,11 +17,13 @@
 
   <main>
     <nav class="tabs" aria-label="Menu categories">
-      <button class="tab active" data-category="food" aria-selected="true">Food Menu</button>
+      <button class="tab active" data-category="special" aria-selected="true">Special Menu</button>
+      <button class="tab" data-category="food" aria-selected="false">Food Menu</button>
       <button class="tab" data-category="drinks" aria-selected="false">Drinks Menu</button>
     </nav>
     <p class="hint">Tap any menu page to view it larger.</p>
-    <section id="food" class="gallery active" aria-label="Food menu pages"></section>
+    <section id="special" class="gallery active" aria-label="Special menu photos"></section>
+    <section id="food" class="gallery" aria-label="Food menu pages" hidden></section>
     <section id="drinks" class="gallery" aria-label="Drinks menu pages" hidden></section>
   </main>
 

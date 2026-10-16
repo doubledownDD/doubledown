@@ -1,11 +1,12 @@
 # Double Down Brewpub & Cafe — Menu Website
 
-A simple, mobile-friendly menu photo website for GitHub Pages. It has 12 Food Menu photo slots and 12 Drinks Menu photo slots. Guests can tap a photo to view it larger and move between pages.
+A simple, mobile-friendly menu photo website for GitHub Pages. It has 2 Special Menu photo slots, 12 Food Menu photo slots, and 12 Drinks Menu photo slots. Special Menu appears first. Guests can tap a photo to view it larger and move between pages.
 
 ## 1. Add your photos
 
 Keep the filenames exactly as listed below. JPEG photos are supported; keep the `.jpeg` extension.
 
+- Special Menu photos: `images/special/special-01.jpeg` and `images/special/special-02.jpeg`
 - Logo: `images/logo.png`
 - Food pages: `images/food/food-01.jpeg` through `images/food/food-12.jpeg`
 - Drinks pages: `images/drinks/drinks-01.jpeg` through `images/drinks/drinks-12.jpeg`
@@ -36,3 +37,11 @@ Share that URL or make a QR code for it. The website is designed for phones and 
 - `images/drinks/drinks-01.jpeg` ... `drinks-12.jpeg`
 
 The site does not upload photos itself; you add the photos to the GitHub repository. Send the logo and menu photos here if you'd like help preparing/naming them.
+
+## Special Menu photo placeholders
+
+Replace the two placeholder slots with your own photos, keeping these exact paths and filenames:
+- `images/special/special-01.jpeg`
+- `images/special/special-02.jpeg`
+
+The website will show a labeled placeholder until each photo is added.
